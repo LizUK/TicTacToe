@@ -1,0 +1,245 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+#wrapper {
+    width: 100%;
+    max-width: 1000px;
+    height: 1000px;
+    margin: 0 auto;
+    padding: 50px 0;
+    background-color: #9F8ADD;
+}
+
+#container {
+    width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/***** WELCOME SCFREEN *****/
+
+#welcome-screen {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#welcome-buttons button,
+#submitbtn {
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#multi-btn {
+    background-color: #FB1CA5;
+}
+
+#single-btn {
+    background-color: #211055;
+}
+
+#comingsoon {
+    margin-top: 0;
+}
+
+/***** RADIO IMAGES *****/
+
+.input-hidden {
+    position: absolute;
+    left: -9999px;
+  }
+  
+  input[type=radio]:checked + label>img {
+    border: 1px solid #fff;
+    box-shadow: 0 0 3px 3px #090;
+  }
+  
+  input[type=radio] + label>img {
+    border: none;
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+    transition: 500ms all;
+  }
+  
+  input[type=radio]:checked + label>img {
+    transform: 
+      rotateZ(-10deg) 
+      rotateX(10deg);
+  }
+  
+/***** GAME FORM *****/
+
+#game-options {
+    width: 600px;
+    margin: 0 auto;
+}
+
+#game-options h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#game-options form {
+        padding-top: 20px;
+}
+
+#form-cols {
+        column-gap: 25px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+}
+
+#player-one,
+#player-two {
+    justify-self: center;
+}
+
+#game-options form input {
+    margin-top: 15px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #D2C5F9;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+#game-options form label {
+    font-weight: bold;
+}
+
+.cavatar {
+    margin-top: 30px;
+}
+
+#computer .avatar-row img,
+#computer .cmarker {
+    border: 1px solid #fff;
+    box-shadow: 0 0 3px 3px #090;
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+    transition: 500ms all;
+    transform: rotateZ(-10deg) rotateX(10deg);
+}
+
+.spacerimg {
+    display: block;
+    width: 80px;
+    height: 80px;
+}
+
+.submit-btn-row {
+    text-align: center;
+}
+
+#game-options form input#submitbtn {
+    width: 200px;
+    background-color: #FB1CA5;
+    color: #fff;
+    height: 40px;
+    margin-top: 40px;
+}
+
+/***** GAME *****/
+
+#game {
+    width: 600px;
+    margin: 0 auto;
+}
+
+#game h1 {
+    text-align: center;
+    margin-top: 0;
+}
+
+#game h1 img {
+    width: 400px;
+}
+
+#players-panels {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+}
+
+.player-avatar img {
+    width: 80px;
+}
+
+.player-marker img {
+    width: 60px;
+}
+
+#player-one-panel,
+#player-two-panel {
+    justify-self: center;
+    text-align: center;
+}
+
+#gameboard {
+    background-color: #403241;
+    width: 400px;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    gap: 25px;
+    margin: 25px auto 0;
+    justify-content: center;
+    padding: 25px 0;
+}
+
+.cell {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.cell:nth-child(odd) {
+    background-color: #FB67C2;
+}
+
+.cell:nth-child(even) {
+    background-color: #6648C3;
+}
+
+.winning-message {
+    border-radius: 25px;
+    margin: 20px auto 0 auto;
+    width: 400px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 10px;
+}
+
+.winning-message h1 {
+    margin: 0;
+}
+
+.winning-message h2 {
+    margin: 5px;
+}
+
+.winning-message div  {
+    background-color: #6648C3;
+    border-radius: 15px;
+    padding: 10px 0;
+    align-self: center;
+    text-align: center;
+}
+
+.winning-message div:last-child {
+    background-color: #FB67C2;
+    cursor: pointer;
+}
+
+.no-display {
+    display: none;
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet">
+
+    <title>Let's Play Tic Tac Toe</title>
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <div id="container">
+
+            <div id="welcome-screen">
+
+                <div id="logo"><img src="images/logo.png"></div>
+
+                <div id="welcome-buttons">
+
+                    <button id="multi-btn">Multiplayer Game</button><br>
+                    <button id="single-btn">Single Player Game</button><h3 id="comingsoon">Single Player Coming soon!</h3>
+
+                </div>
+
+            </div><!-- End #welcome-screen -->
+
+            <div id="game-options"  class="no-display">
+
+                <h1>Who's playing?</h1>
+
+                    <form id="game-form">
+
+                        <div id="form-cols">
+
+                            <div id="player-one">
+
+                                <label>Player One's Name:</label><br>
+                                <input id="playerone-name" name="playerone-name">
+
+                                <h3>Choose your Avatar:</h3>
+
+                                <div class="avatars">
+
+                                    <div class="avatar-row">
+                            
+                                        <input type="radio" name="p1avatar" id="p1avatar1" value="av1" class="input-hidden" required/>
+                                        <label for="p1avatar1">
+                                        <img src="images/av1.png" alt="I'm Avatar One" />
+                                        </label>
+
+                                        <input type="radio" name="p1avatar" id="p1avatar2" value="av2" class="input-hidden" />
+                                        <label for="p1avatar2">
+                                        <img src="images/av2.png" alt="I'm Avatar Two" />
+                                        </label>
+
+                                    </div>
+
+                                    <div class="avatar-row">
+
+                                        <input type="radio" name="p1avatar" id="p1avatar3" value="av3" class="input-hidden" />
+                                        <label for="p1avatar3">
+                                        <img src="images/av3.png" alt="I'm Avatar Three" />
+                                        </label>
+
+                                        <input type="radio" name="p1avatar" id="p1avatar4" value="av4" class="input-hidden" />
+                                        <label for="p1avatar4">
+                                        <img src="images/av4.png" alt="I'm Avatar Four" />
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                                <h3>Choose your Marker:</h3>
+                            
+                                <input type="radio" name="p1marker" id="p1naught" value="naught" class="input-hidden" required/>
+                                <label for="p1naught">
+                                <img src="images/naught.png" alt="Naughts" />
+                                </label>
+
+                                <input type="radio" name="p1marker" id="p1cross" value="cross" class="input-hidden" />
+                                <label for="p1cross">
+                                <img src="images/cross.png" alt="Crosses" />
+                                </label>
+
+                            </div><!-- End #player-one -->
+
+
+                            <div id="player-two" class="no-display">
+
+                                <label>Player Two's Name:</label><br>
+                                <input id="playertwo-name" name="playertwo-name">
+
+                                <h3>Choose your Avatar:</h3>
+
+                                <div class="avatars">
+
+                                    <div class="avatar-row">
+                            
+                                        <input type="radio" name="p2avatar" id="p2avatar1" value="av1" class="input-hidden" required/>
+                                        <label for="p2avatar1">
+                                        <img src="images/av1.png" alt="I'm Avatar One" />
+                                        </label>
+
+                                        <input type="radio" name="p2avatar" id="p2avatar2" value="av2" class="input-hidden" />
+                                        <label for="p2avatar2">
+                                        <img src="images/av2.png" alt="I'm Avatar Two" />
+                                        </label>
+
+                                    </div>
+
+                                    <div class="avatar-row">
+
+                                        <input type="radio" name="p2avatar" id="p2avatar3" value="av3" class="input-hidden" />
+                                        <label for="p2avatar3">
+                                        <img src="images/av3.png" alt="I'm Avatar Three" />
+                                        </label>
+
+                                        <input type="radio" name="p2avatar" id="p2avatar4" value="av4" class="input-hidden" />
+                                        <label for="p2avatar4">
+                                        <img src="images/av4.png" alt="I'm Avatar Four" />
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                                <h3>Choose your Marker:</h3>
+                            
+                                <input type="radio" name="p2marker" id="p2naught" value="naught" class="input-hidden" required />
+                                <label for="p2naught">
+                                <img src="images/naught.png" alt="Naughts" />
+                                </label>
+
+                                <input type="radio" name="p2marker" id="p2cross" value="cross" class="input-hidden" />
+                                <label for="p2cross">
+                                <img src="images/cross.png" alt="Crosses" />
+                                </label>
+
+                            </div><!-- End #player-two -->
+
+                            <div id="computer" class="no-display">
+
+                                <label>Player Two's Name:</label><br>
+                                <h3>Computer</h3>
+                                
+                                <h3 class="cavatar">Computer's Avatar:</h3>
+
+                                <div class="avatars">
+
+                                    <div class="avatar-row">
+                            
+                                        <img src="images/avc.png" alt="Computer Avatar" />
+
+                                    </div>
+
+                                    <div class="avatar-row">
+
+                                        <span class="spacerimg"></span>
+
+                                    </div>
+
+                                </div>
+
+                                <h3>Computer's Marker:</h3>
+                            
+                                <img class="cmarker" src="images/avc/cross.png" alt="Crosses" />
+
+                            </div><!-- End #computer -->
+
+                        </div>
+
+                        <div class="submit-btn-row">
+
+                            <input type="submit" id="submitbtn" value="Start Game">
+
+                        </div>
+
+                    </form>                
+
+            </div><!-- End #game-options -->
+
+            <div id="game" class="no-display">
+
+                <h1><img src="images/inner-logo.png"></h1>
+                
+                <div id="players-panels">
+
+                    <div id="player-one-panel">
+
+                        <div class="player-avatar"><img src="images/av1.png"></div>
+
+                        <div class="player-name"><h3>Player One</h3><h3 class="score"></h3></div>
+
+                        <div class="player-marker"><img src="images/av1/cross.png"></div>
+
+                    </div><!-- End #player-one-panel-->
+
+                    <div id="player-two-panel">
+
+                        <div class="player-avatar"><img src="images/av2.png"></div>
+
+                        <div class="player-name"><h3>Player Two</h3><h3 class="score"></h3></div>
+
+                        <div class="player-marker"><img src="images/av2/naught.png"></div>
+
+                    </div><!-- End #player-two-panel-->
+
+                </div><!-- End #player-panels-->
+
+                <div class="winning-message no-display" id="winningMessage">
+                    <div><h1 id="winningMessageText"></h1></div>
+                    <div><h2 id="restartBtn">Restart</h2></div>
+                </div>
+                
+                <div id="gameboard">
+
+                    <div class="cell" data-cell></div>
+                    <div class="cell" data-cell></div>
+                    <div class="cell" data-cell></div>
+
+                    <div class="cell" data-cell></div>
+                    <div class="cell" data-cell></div>
+                    <div class="cell" data-cell></div>
+
+                    <div class="cell" data-cell></div>
+                    <div class="cell" data-cell></div>
+                    <div class="cell" data-cell></div>
+
+                </div><!-- End #gameboard -->
+
+            </div><!-- End #game -->
+
+        </div><!-- End #container -->
+
+    </div><!-- End #wrapper -->
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
